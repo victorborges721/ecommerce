@@ -1,8 +1,18 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 function App() {
-  return <div></div>;
+  return (
+    <Router>
+      <Navbar />
+      {/* SideDrawer */}
+      {/* Backdrop */}
+      {/* HomeScreen */}
+      {/* ProductScreen */}
+      {/* CartScreen */}
+    </Router>
+  );
 }
 
 export default App;
