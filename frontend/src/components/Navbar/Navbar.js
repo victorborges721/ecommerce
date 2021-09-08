@@ -1,6 +1,7 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Badge, Container, Nav, Navbar } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import "./style.css";
 
 const NavigationBar = () => {
@@ -11,8 +12,23 @@ const NavigationBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <LinkContainer to="/cart">
-              <Nav.Link>Cart</Nav.Link>
+            <LinkContainer
+              to="/cart"
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <Nav.Link>
+                <AiOutlineShoppingCart />
+                &nbsp;Cart&nbsp;
+                <Badge pill bg="secondary">
+                  0
+                </Badge>
+              </Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/">
+              <Nav.Link>Shop</Nav.Link>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>
