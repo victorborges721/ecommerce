@@ -13,9 +13,7 @@ const Product = () => {
       <Card.Body>
         <Card.Title>Resident Evil 5</Card.Title>
         <Card.Text>$22.45</Card.Text>
-        <Link to={`/product/${1111}`}>
-          <Button variant="primary">View Product</Button>
-        </Link>
+        <Link to={`/product/${1111}`}>View Product </Link>
       </Card.Body>
     </Card>
   );

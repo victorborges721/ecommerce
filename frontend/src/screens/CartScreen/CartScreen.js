@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 
 const CartScreen = () => {
-  return <div></div>;
+  return <main></main>;
 };
 
 export default CartScreen;

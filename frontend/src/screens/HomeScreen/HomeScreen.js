@@ -5,7 +5,7 @@ import "./style.css";
 
 const HomeScreen = () => {
   return (
-    <div>
+    <main>
       <Container>
         <CardColumns>
           <Product />
@@ -16,7 +16,7 @@ const HomeScreen = () => {
           <Product />
         </CardColumns>
       </Container>
-    </div>
+    </main>
   );
 };
 
