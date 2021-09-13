@@ -13,7 +13,7 @@ const Product = ({
 }) => {
   return (
     <Card style={{ width: "18rem" }}>
-      <Card.Img src={imageUrl} alt={name} />
+      <Card.Img src={imageUrl} alt={name} style={{ height: "160.88px" }} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>${price}</Card.Text>

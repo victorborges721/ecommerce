@@ -14,7 +14,7 @@ const NavigationBar = () => {
   };
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="lg" variant="dark" style={{ backgroundColor: "#1b1b3a" }}>
       <Container>
         <Navbar.Brand href="/">E-Commerce</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -25,6 +25,7 @@ const NavigationBar = () => {
               style={{
                 display: "flex",
                 alignItems: "center",
+                color: "white",
               }}
             >
               <Nav.Link>

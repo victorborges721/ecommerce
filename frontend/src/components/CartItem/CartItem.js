@@ -30,7 +30,7 @@ const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
             </select>
           </p>
           <Button
-            variant="danger"
+            className="btn-trash"
             style={{ display: "flex" }}
             onClick={() => removeHandler(item.product)}
           >
