@@ -2,9 +2,17 @@ import React from "react";
 import { Badge, Container, Nav, Navbar } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useSelector } from "react-redux";
 import "./style.css";
 
 const NavigationBar = () => {
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
+
+  const getCartCount = () => {
+    return cartItems.reduce((qty, item) => qty + Number(item.qty), 0);
+  };
+
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -23,7 +31,7 @@ const NavigationBar = () => {
                 <AiOutlineShoppingCart />
                 &nbsp;Cart&nbsp;
                 <Badge pill bg="secondary">
-                  0
+                  {getCartCount()}
                 </Badge>
               </Nav.Link>
             </LinkContainer>
