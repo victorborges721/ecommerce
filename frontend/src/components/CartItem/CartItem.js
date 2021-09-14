@@ -8,16 +8,21 @@ const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
   return (
     <Card className="cartitem">
       <Row>
-        <Col xs={12} md={5} className="cartitem-left">
+        <Col xs={12} md={6} className="cartitem-left">
           <img src={item.imageUrl} alt={item.name} style={{ width: "100%" }} />
         </Col>
-        <Col xs={12} md={7} className="cartitem-right">
-          <Link to={`/product/${item.product}`}>
+        <Col xs={12} md={6} className="cartitem-right">
+          <Link
+            to={`/product/${item.product}`}
+            className="cartitem-productname"
+          >
             <h5>{item.name}</h5>
           </Link>
-          <p>Price: ${item.price}</p>
           <p>
-            Qty
+            <strong>Price:</strong> ${item.price}
+          </p>
+          <p>
+            <strong>Qty:</strong>{" "}
             <select
               value={item.qty}
               onChange={(e) => qtyChangeHandler(item.product, e.target.value)}

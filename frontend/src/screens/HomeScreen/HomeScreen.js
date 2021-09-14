@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { CardColumns, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import "./style.css";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -17,7 +17,7 @@ const HomeScreen = () => {
 
   useEffect(() => {
     dispatch(listProducts());
-  }, []);
+  }, [dispatch]);
 
   return (
     <main>

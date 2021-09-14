@@ -1,5 +1,29 @@
+.cartitem {
+  width: 100%;
+}
+
+.cartitem-left {
+  padding-right: 0;
+}
+
 .cartitem-right {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding-left: 0;
+}
+
+.cartitem-right > * {
+  margin: 0.4rem 0;
+}
+
+.cartitem-productname {
+  color: black;
+  text-decoration: none;
+}
+
+.cartitem-productname:hover,
+.cartitem-productname:focus {
+  color: #693668;
 }
