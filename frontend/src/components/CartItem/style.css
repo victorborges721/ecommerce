@@ -27,3 +27,17 @@
 .cartitem-productname:focus {
   color: #693668;
 }
+
+.cartitem-img {
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .cartitem-left {
+    padding-right: 12px;
+  }
+  .cartitem-right {
+    padding: 0.5rem 12px 0.5rem 12px;
+  }
+}

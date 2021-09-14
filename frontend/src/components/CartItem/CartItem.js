@@ -9,7 +9,12 @@ const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
     <Card className="cartitem">
       <Row>
         <Col xs={12} md={6} className="cartitem-left">
-          <img src={item.imageUrl} alt={item.name} style={{ width: "100%" }} />
+          <img
+            src={item.imageUrl}
+            alt={item.name}
+            style={{ width: "100%" }}
+            className="cartitem-img"
+          />
         </Col>
         <Col xs={12} md={6} className="cartitem-right">
           <Link

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Container, Row, Col } from "react-bootstrap";
+import { Button, Container, Row, Col, ListGroup } from "react-bootstrap";
 import CartItem from "../../components/CartItem";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -43,6 +43,7 @@ const CartScreen = () => {
             ) : (
               cartItems.map((item) => (
                 <CartItem
+                  key={item.product}
                   item={item}
                   qtyChangeHandler={qtyChangeHandler}
                   removeHandler={removeHandler}
@@ -51,9 +52,21 @@ const CartScreen = () => {
             )}
           </Col>
           <Col xs={12} md={4}>
-            <p>Subtotal ({getCartCount()}) items</p>
-            <p>${getCartSubtotal().toFixed(2)}</p>
-            <Button>Proceed to Checkout</Button>
+            <ListGroup style={{ padding: "0" }}>
+              <ListGroup.Item>
+                <p>
+                  <strong>Item total:</strong> ({getCartCount()}) items
+                </p>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <p>
+                  <strong>Total:</strong> ${getCartSubtotal().toFixed(2)}
+                </p>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <Button>Proceed to Checkout</Button>
+              </ListGroup.Item>
+            </ListGroup>
           </Col>
         </Row>
       </Container>
