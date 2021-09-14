@@ -21,25 +21,23 @@ const HomeScreen = () => {
 
   return (
     <main>
-      <Container>
-        <CardColumns>
-          {loading ? (
-            <h2>Loading...</h2>
-          ) : error ? (
-            <h2>{error}</h2>
-          ) : (
-            products.map((product) => (
-              <Product
-                key={product._id}
-                productId={product._id}
-                name={product.name}
-                price={product.price}
-                description={product.description}
-                imageUrl={product.imageUrl}
-              />
-            ))
-          )}
-        </CardColumns>
+      <Container className="grid-container">
+        {loading ? (
+          <h2>Loading...</h2>
+        ) : error ? (
+          <h2>{error}</h2>
+        ) : (
+          products.map((product) => (
+            <Product
+              key={product._id}
+              productId={product._id}
+              name={product.name}
+              price={product.price}
+              description={product.description}
+              imageUrl={product.imageUrl}
+            />
+          ))
+        )}
       </Container>
     </main>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ListGroup, Button, Row, Col, Container } from "react-bootstrap";
+import { Image, ListGroup, Button, Row, Col, Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import "./style.css";
 
@@ -35,25 +35,29 @@ const ProductScreen = ({ match, history }) => {
         ) : (
           <>
             <Row>
-              <Col xs={12} md={4}>
-                <img
+              <Col xs={12} md={4} className="productscreen-imagecontainer">
+                <Image
                   src={product.imageUrlCase}
                   alt={product.name}
-                  style={{ width: "100%" }}
+                  className="productscreen-image"
                 />
               </Col>
-              <Col xs={12} md={5}>
+              <Col xs={12} md={5} className="productscreen-text">
                 <h3>{product.name}</h3>
                 <p>
-                  Platforms:
+                  <strong>Platforms:</strong>
                   {/* {product.platforms.map((platform, index) => (
                     <span key={index}>{platform}</span>
                   ))} */}
                 </p>
-                <p>Price: ${product.price}</p>
-                <p>Description: {product.description}</p>
+                <p>
+                  <strong>Price:</strong> ${product.price}
+                </p>
+                <p>
+                  <strong>Description:</strong> {product.description}
+                </p>
               </Col>
-              <Col xs={12} md={3}>
+              <Col xs={12} md={3} className="productscreen-cartoptions">
                 <ListGroup>
                   <ListGroup.Item>
                     <p>
