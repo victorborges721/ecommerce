@@ -15,6 +15,11 @@
   margin: 0.5rem 0;
 }
 
+.productscreen-platform {
+  margin-right: 0.5rem;
+  background-color: #693668 !important;
+}
+
 @media only screen and (max-width: 768px) {
   .productscreen-imagecontainer,
   .productscreen-text,

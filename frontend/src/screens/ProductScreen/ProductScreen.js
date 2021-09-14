@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Image, ListGroup, Button, Row, Col, Container } from "react-bootstrap";
+import {
+  Image,
+  ListGroup,
+  Button,
+  Row,
+  Col,
+  Container,
+  Badge,
+} from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import "./style.css";
 
@@ -45,10 +53,17 @@ const ProductScreen = ({ match, history }) => {
               <Col xs={12} md={5} className="productscreen-text">
                 <h3>{product.name}</h3>
                 <p>
-                  <strong>Platforms:</strong>
-                  {/* {product.platforms.map((platform, index) => (
-                    <span key={index}>{platform}</span>
-                  ))} */}
+                  <strong>Platforms: </strong>
+                  {product.platforms &&
+                    product.platforms.map((platform, index) => (
+                      <Badge
+                        key={index}
+                        pill
+                        className="productscreen-platform"
+                      >
+                        {platform}
+                      </Badge>
+                    ))}
                 </p>
                 <p>
                   <strong>Price:</strong> ${product.price}
