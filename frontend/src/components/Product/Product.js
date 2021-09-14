@@ -12,11 +12,11 @@ const Product = ({
   productId,
 }) => {
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card style={{ width: "18rem" }} className="grow">
       <Card.Img src={imageUrl} alt={name} style={{ height: "160.88px" }} />
       <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Text>${price}</Card.Text>
+        <Card.Title className="card-title">{name}</Card.Title>
+        <Card.Text className="card-price">${price}</Card.Text>
         <Link to={`/product/${productId}`}>
           <Button>View Product</Button>
         </Link>

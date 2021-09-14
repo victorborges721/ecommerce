@@ -41,3 +41,11 @@ p {
 main {
   margin: 2rem 0;
 }
+
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+}

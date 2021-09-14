@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Row, Col, Container } from "react-bootstrap";
+import { ListGroup, Button, Row, Col, Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import "./style.css";
 
@@ -37,7 +37,7 @@ const ProductScreen = ({ match, history }) => {
             <Row>
               <Col xs={12} md={4}>
                 <img
-                  src={product.imageUrl}
+                  src={product.imageUrlCase}
                   alt={product.name}
                   style={{ width: "100%" }}
                 />
@@ -54,18 +54,31 @@ const ProductScreen = ({ match, history }) => {
                 <p>Description: {product.description}</p>
               </Col>
               <Col xs={12} md={3}>
-                <p>Price: ${product.price}</p>
-                <p>
-                  Qty
-                  <select value={qty} onChange={(e) => setQty(e.target.value)}>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
-                </p>
-                <Button onClick={addToCartHandler}>Add to Cart</Button>
+                <ListGroup>
+                  <ListGroup.Item>
+                    <p>
+                      <strong>Price:</strong> ${product.price}
+                    </p>
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    <p>
+                      <strong>Qty:</strong>{" "}
+                      <select
+                        value={qty}
+                        onChange={(e) => setQty(e.target.value)}
+                      >
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                    </p>
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    <Button onClick={addToCartHandler}>Add to Cart</Button>
+                  </ListGroup.Item>
+                </ListGroup>
               </Col>
             </Row>
           </>
