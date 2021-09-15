@@ -1,0 +1,24 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shipping-form {
+  border: 2px solid #693668;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .shipping-form {
+    width: 100%;
+    border: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .shipping-form {
+    width: 60%;
+  }
+}

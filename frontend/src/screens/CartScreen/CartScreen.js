@@ -64,7 +64,9 @@ const CartScreen = () => {
                 </p>
               </ListGroup.Item>
               <ListGroup.Item>
-                <Button>Proceed to Checkout</Button>
+                <Link to="/shipping">
+                  <Button>Proceed to Checkout</Button>
+                </Link>
               </ListGroup.Item>
             </ListGroup>
           </Col>
