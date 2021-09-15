@@ -3,15 +3,11 @@ import { Button, Container, Form, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./style.css";
 
-// City, State, ZIP Code
-// Card number, Name on card, Expiration date, Security Code (CVV/CVC)
-
 const ShippingScreen = () => {
   return (
     <main>
       <Container className="form-container">
         <Form className="shipping-form">
-          {/* Change to select */}
           <h3 className="mb-3">Shipping Information</h3>
           <Form.Group className="mb-3" controlId="formRegion">
             <Form.Label>Country/Region</Form.Label>
@@ -65,9 +61,7 @@ const ShippingScreen = () => {
           </Row>
 
           <Link to="/payment">
-            <Button variant="primary" type="submit">
-              Continue to Payment
-            </Button>
+            <Button>Continue to Payment</Button>
           </Link>
         </Form>
       </Container>
