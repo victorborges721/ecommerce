@@ -16,7 +16,7 @@ const NavigationBar = () => {
   return (
     <Navbar expand="lg" variant="dark" style={{ backgroundColor: "#1b1b3a" }}>
       <Container>
-        <Navbar.Brand href="/">E-Commerce</Navbar.Brand>
+        <Navbar.Brand href="/">Game Garage</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">

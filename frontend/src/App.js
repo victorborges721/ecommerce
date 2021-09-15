@@ -9,6 +9,7 @@ import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
 import ShippingScreen from "./screens/ShippingScreen";
 import PaymentScreen from "./screens/PaymentScreen";
+import ConfirmationScreen from "./screens/ConfirmationScreen";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/cart" component={CartScreen} />
         <Route exact path="/shipping" component={ShippingScreen} />
         <Route exact path="/payment" component={PaymentScreen} />
+        <Route exact path="/confirmation" component={ConfirmationScreen} />
       </Switch>
     </Router>
   );
