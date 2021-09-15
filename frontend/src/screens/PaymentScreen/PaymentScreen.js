@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { months, days } from "../../assets/vars";
 import "./style.css";
 
-// Card number, Name on card, Expiration date, Security Code (CVV/CVC)
-
 const PaymentScreen = () => {
+  const handlePayment = () => {};
+
   return (
     <main>
       <Container className="form-container">
