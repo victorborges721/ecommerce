@@ -2,10 +2,18 @@ import React from "react";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { months, days } from "../../assets/vars";
+import { useDispatch, useSelector } from "react-redux";
 import "./style.css";
 
+// Actions
+import { resetCart } from "../../redux/actions/cartActions";
+
 const PaymentScreen = () => {
-  const handlePayment = () => {};
+  const dispatch = useDispatch();
+
+  const handlePayment = () => {
+    dispatch(resetCart());
+  };
 
   return (
     <main>
@@ -54,7 +62,7 @@ const PaymentScreen = () => {
           </Row>
 
           <Link to="/confirmation">
-            <Button>Place Order</Button>
+            <Button onClick={() => handlePayment()}>Place Order</Button>
           </Link>
         </Form>
       </Container>
