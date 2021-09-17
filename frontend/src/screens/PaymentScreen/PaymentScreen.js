@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { months, days } from "../../assets/vars";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import "./style.css";
 
 // Actions
