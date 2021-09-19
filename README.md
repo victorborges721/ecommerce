@@ -2,7 +2,7 @@
 
 Game Garage is a MERN e-commerce app that sells some of my favorite video games from over the years. Select a game to read its description and available platforms. This app uses a MongoDB database, Express and NodeJS, and a React frontend.
 
-[Visit the live demo!]()
+[Visit the live demo!](http://gamegarage.victorborges.me/)
 
 ## Features
 
